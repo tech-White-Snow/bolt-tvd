@@ -1,0 +1,6 @@
+.eslintrc.js
+public/
+contentful/
+bin/
+.cache/
+gatsby-config.js

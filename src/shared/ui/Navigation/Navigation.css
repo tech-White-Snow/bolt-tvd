@@ -1,0 +1,53 @@
+.close {
+  position: absolute;
+  left: 40px;
+  top: 34px;
+  width: 32px;
+  height: 32px;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.headline {
+  width: 195px;
+  font-size: 52px;
+  height: 100vh;
+  top: 18px;
+  right: 0;
+  position: absolute;
+}
+
+
+@supports (backdrop-filter: blur(20px)) {
+  .visually-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .headline {
+    backdrop-filter: blur(20px);
+    position: absolute;
+    background: rgba(77, 66, 66, 0.4);
+    clip-path: url(#lockup-headline-mask-path);
+  }
+}

@@ -1,0 +1,39 @@
+.section {
+  font-family: 'Bai Jamjuree', 'sans-serif';
+  background-size: cover;
+  background-position: top center;
+}
+
+#fp-nav ul li a span {
+  background: #fff !important;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+#fp-nav ul li a span:hover {
+  opacity: 1;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
